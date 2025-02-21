@@ -2,10 +2,15 @@ import './style.css'
 import typescriptLogo from './typescript.svg'
 import viteLogo from '/vite.svg'
 import { setupCounter } from './counter.ts'
-import { macbook } from './types/products/ElectronicProduct.ts'
 import { getPokemon } from './pokemon.ts'
+import { isBalanced } from './task/isBalanced.ts'
+import { generatePrimes } from './task/generatePrimes.ts'
 
-console.log(macbook)
+console.log(isBalanced("{[()]}")); // true
+console.log(isBalanced("{[(])}")); // false
+console.log(isBalanced("{{[[(())]]}}")); // true
+
+console.log(generatePrimes(10)); // [2, 3, 5, 7, 11, 13, 17, 19, 23, 29]
 
 async function getSomePokemon(id: number) {
   const res = await getPokemon(id)
