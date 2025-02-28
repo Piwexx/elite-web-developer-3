@@ -1,5 +1,4 @@
 export function generatePrimes(n: number): number[] {
-  // Función de orden superior para la memoización de los primos.
   const memoize = (fn: Function) => {
     const cache: number[] = [];
     return (limit: number) => {
